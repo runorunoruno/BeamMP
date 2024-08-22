@@ -56,6 +56,10 @@ local roleToInfo = {
 	['NGAFFIL']	= { backcolor = ColorI(252, 107, 003, 127), forecolor = ColorI(252, 107, 003, 127), tag = " [BeamNG Affiliate]", shorttag = " [BNG]" }
 }
 
+local function getRoleInfoTable()
+	return roleToInfo
+end
+
 --- (in table) Specifies the table in roleToInfo
 -- @table roleToInfo_subtable
 -- @tfield ColorI backcolor Contains RGBA Values wiki.beamng.com/Lua:Reference#ColorI
@@ -2261,6 +2265,7 @@ M.queryRoadNodeToPosition  = queryRoadNodeToPosition  -- takes: vec3 target posi
 M.sendVehicleEdit          = sendVehicleEdit          -- UI 'Sync' button
 M.onVehicleReady           = onVehicleReady           -- Called when our VE files load and the vehicle is ready
 M.onSettingsChanged        = onSettingsChanged        -- takes: -
+M.getRoleInfoTable         = getRoleInfoTable
 M.onInit = function() setExtensionUnloadMode(M, "manual") end
 
 
